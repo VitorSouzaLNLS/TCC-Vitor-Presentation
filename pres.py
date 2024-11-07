@@ -311,14 +311,14 @@ class SceneTCC2(ThreeDSlide):
         self.play(FadeIn(particle))
 
         #* run
-        # self.next_slide(loop=True)
-        # orbdraw.add_updater(ideal_p_updater)
-        # particle.add_updater(real_p_updater)
-        # particle.update()
-        # orbdraw.update()
+        self.next_slide(loop=True)
+        orbdraw.add_updater(ideal_p_updater)
+        particle.add_updater(real_p_updater)
+        particle.update()
+        orbdraw.update()
         path = TracedPath(particle.get_center, dissipating_time=1.2, stroke_opacity=[0, 1], stroke_color=RED, stroke_width=2)
         self.add(path)
-        # self.play(particle.animate, run_time=1*runtime, rate_func=linear)
+        self.play(particle.animate, run_time=1*runtime, rate_func=linear)
 
 
         self.next_slide()

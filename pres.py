@@ -14,18 +14,19 @@ FSTITLE = 1.05
 FSTEXT = 0.95
 
 def doslidetitle(string, section=None):
-            if section is None:
-                return Tex("\\textbf{"+string+"}", color=stdcolor).scale(FSTITLE)
-            else:
-                return Tex("{\\small "+section+":} \\textbf{"+string+"}", color=stdcolor).scale(FSTITLE)
+    if section is None:
+        return Tex("\\textbf{"+string+"}", color=stdcolor).scale(FSTITLE)
+    else:
+        return Tex("\\textbf{"+string+"}", color=stdcolor).scale(FSTITLE)
+        # return Tex("{\\small "+section+":} \\textbf{"+string+"}", color=stdcolor).scale(FSTITLE)
+
 def doslideframe(string):
     return Tex("\\textbf{"+string+"}", color=stdcolor).scale(FSDOCTITLE*1.2)
 
-snf = 0
 
 class SceneTCC1(Slide):
     def construct(self):
-        sN = globals()["snf"]
+        sN = 0
         self.camera.background_color = background_color
         slideNUMBER = Integer(sN).scale(0.6).to_corner(DOWN + RIGHT).set_color(background_color)
         slideNUMBER.add_updater(
@@ -50,8 +51,8 @@ class SceneTCC1(Slide):
         itensc = Tex("""
         \\begin{itemize}
             \\item Theoretical Review
-            \\item Path Length Limitation
-            \\item Path Length Modification
+            \\item Particle Tracking
+            \\item Path Length
             \\item Results
             \\item Conclusion
         \\end{itemize}""", color=stdcolor).scale(FSTEXT*0.7)
@@ -73,61 +74,9 @@ class SceneTCC1(Slide):
         slidetitle = doslidetitle("Synchrotrons", section=ftitle).to_corner(UP+LEFT)
         self.play(FadeIn(slideNUMBER), FadeTransform(capframe, slidetitle))
 
-        # #* Slide
-        # sN += 1
-        # self.next_slide()
-        # slideNUMBER.update()
-        # temp = slidetitle
-        # slidetitle = doslidetitle("Particle Dynamics", section=ftitle).to_corner(UP+LEFT)
-        # self.play(FadeTransform(temp, slidetitle))
-
-
-class SceneTCC3(Slide):
-    def construct(self):
-        sN = globals()["snf"]
-        self.camera.background_color = background_color
-
-        slideNUMBER = Integer(sN).scale(0.6).to_corner(DOWN + RIGHT).set_color(background_color)
-        slideNUMBER.add_updater(
-            lambda mob: mob.set_value(sN)
-        )
-        #!########### PATH LENGHT X ############
-
-        #* Section Frame
-        self.next_slide()
-        slidetitle = doslidetitle("Particle Dynamics", section="Theoretical Review").to_corner(UP+LEFT)
-        # self.add(slidetitle)
-        ftitle = "Path Length X"
-        capframe = doslideframe(ftitle)
-        slideNUMBER.set_color(background_color)
-        # self.play(ReplacementTransform(slidetitle, capframe))
-        # self.play(Write(capframe))
-
-        #* Slide
-        sN += 1
-        self.next_slide()
-        slideNUMBER.set_color(stdcolor).update()
-        slidetitle = doslidetitle("Issue", section=ftitle).to_corner(UP+LEFT)
-        self.play(FadeTransform(capframe, slidetitle))
-
-        #* Slide
-        sN += 1
-        self.next_slide()
-        slideNUMBER.update()
-        temp = slidetitle
-        slidetitle = doslidetitle("Particle Dynamics", section=ftitle).to_corner(UP+LEFT)
-        self.play(FadeTransform(temp, slidetitle))
-
-
-        #!########### END ############
-        self.next_slide()
-
-        end = doslidetitle("End").scale(FSDOCTITLE)
-        self.play(FadeOut(slideNUMBER), ReplacementTransform(slidetitle, end))
-
 class SceneTCC2(ThreeDSlide):
     def construct(self):
-        sN = globals()["snf"]
+        sN = 2
         self.camera.background_color = background_color
         self.set_camera_orientation(phi=70*DEGREES)
 
@@ -146,25 +95,27 @@ class SceneTCC2(ThreeDSlide):
 
         #* Slide
 
-        slideNUMBER = Integer(sN).scale(0.6).to_corner(DOWN + RIGHT).set_color(background_color)
-        slideNUMBER.add_updater(
-            lambda mob: mob.set_value(sN)
-        )
+        # slideNUMBER = Integer(sN).scale(0.6).set_color(BLACK).to_corner(DOWN + RIGHT)
+        # slideNUMBER.add_updater(
+        #     lambda mob: mob.set_value(sN)
+        # )
+        slideNUMBER = MathTex(str(sN)).scale(0.6).set_color(BLACK).to_corner(DOWN + RIGHT)
 
-        sN += 1
         self.next_slide()
         slideNUMBER.update()
+        self.add_fixed_in_frame_mobjects(slideNUMBER)
         ftitle = "Theoretical Review"
         slidetitle = doslidetitle("Synchrotrons", section=ftitle).to_corner(UP+LEFT)
         temp = slidetitle
         self.add_fixed_in_frame_mobjects(temp)
-        self.remove(temp)
-        self.add_fixed_in_frame_mobjects(temp)
-        slidetitle = doslidetitle("Particle Dynamics", section=ftitle).to_corner(UP+LEFT)
+        # self.remove(temp)
+        # self.add_fixed_in_frame_mobjects(temp)
+        slidetitle = doslidetitle("Coordinate System", section=ftitle).to_corner(UP+LEFT)
         self.add_fixed_in_frame_mobjects(slidetitle)
         self.remove(slidetitle)
         self.play(Unwrite(temp), Write(slidetitle, reverse=True))
-        self.add_fixed_in_frame_mobjects(slidetitle)
+        # self.add_fixed_in_frame_mobjects(slidetitle)
+
 
         # title = doslidetitle("Particle Dynamics", "Theoretical Review").to_corner(UP+LEFT)
         # self.add_fixed_in_frame_mobjects(title)
@@ -226,6 +177,7 @@ class SceneTCC2(ThreeDSlide):
 
         #* criando vetor da orbita
         self.next_slide()
+        self.add(slidetitle)
         orbdraw.remove_updater(ideal_p_updater)
         self.play(Create(orbvec), run_time=0.7, rate_func=linear)
         self.play(Write(orbstr), runtime=0.7)
@@ -359,14 +311,14 @@ class SceneTCC2(ThreeDSlide):
         self.play(FadeIn(particle))
 
         #* run
-        self.next_slide(loop=True)
-        orbdraw.add_updater(ideal_p_updater)
-        particle.add_updater(real_p_updater)
-        particle.update()
-        orbdraw.update()
+        # self.next_slide(loop=True)
+        # orbdraw.add_updater(ideal_p_updater)
+        # particle.add_updater(real_p_updater)
+        # particle.update()
+        # orbdraw.update()
         path = TracedPath(particle.get_center, dissipating_time=1.2, stroke_opacity=[0, 1], stroke_color=RED, stroke_width=2)
         self.add(path)
-        self.play(particle.animate, run_time=1*runtime, rate_func=linear)
+        # self.play(particle.animate, run_time=1*runtime, rate_func=linear)
 
 
         self.next_slide()
@@ -379,12 +331,92 @@ class SceneTCC2(ThreeDSlide):
         FadeOut(shat),FadeOut(shatstr),FadeOut(shattext),
         FadeOut(xhat),FadeOut(xhatstr),FadeOut(xhattext),
         FadeOut(yhat),FadeOut(yhatstr),FadeOut(yhattext),
-        FadeOut(frenet), FadeOut(slidetitle))
+        FadeOut(frenet))#, FadeOut(slidetitle), FadeOut(slideNUMBER))
 
         # self.next_slide()
 
-        capframe = doslideframe("Path Length X")
+        sN += 1
+        self.remove(slideNUMBER)
+        slideNUMBER = MathTex(str(sN)).scale(0.6).set_color(BLACK).to_corner(DOWN + RIGHT)
+        self.add_fixed_in_frame_mobjects(slideNUMBER)
+        self.remove(slidetitle)
+        temp = slidetitle
+        slidetitle = doslidetitle("Longitudinal Motion").to_corner(UP+LEFT)
+        self.add_fixed_in_frame_mobjects(temp)
+        self.add_fixed_in_frame_mobjects(slidetitle)
+        self.remove(slidetitle)
+        self.play(Unwrite(temp), Write(slidetitle, reverse=True))
+
+
+
+class SceneTCC3(Slide):
+    def construct(self):
+        sN = 3
+        self.camera.background_color = background_color
+
+        slideNUMBER = Integer(sN).scale(0.6).to_corner(DOWN + RIGHT).set_color(stdcolor)
+        slideNUMBER.add_updater(
+            lambda mob: mob.set_value(sN)
+        )
+        #!########### PATH LENGHT X ############
+
+        # #* Section Frame
+        # self.next_slide()
+        sN += 1
+        slideNUMBER.update()
+        self.add(slideNUMBER)
+        temp = doslidetitle("Longitudinal Motion", section="Theoretical Review").to_corner(UP+LEFT)
+        self.add(temp)
+        slidetitle = doslidetitle("Synchrotron Oscillations", section="Theoretical Review").to_corner(UP+LEFT)
+        self.play(Unwrite(temp), Write(slidetitle, reverse=True))
+
+        self.next_slide()
+        self.add(slidetitle)
+        testtext = MathTex("f(x) = \\dfrac{x^2}{2\\!}", color=stdcolor).scale(0.7)
+        self.play(Write(testtext))
+
+        self.next_slide()
+        self.play(FadeOut(testtext))
+
+        # #* Section Frame
+        self.next_slide()
+        # slidetitle = doslidetitle("Particle Dynamics", section="Theoretical Review").to_corner(UP+LEFT)
+        # # self.add(slidetitle)
+        ftitle = "Particle Tracking"
+        capframe = doslideframe(ftitle)
         slideNUMBER.set_color(background_color)
-        self.add_fixed_in_frame_mobjects(capframe)
-        self.remove(capframe)
-        self.play(Write(capframe))
+        self.play(ReplacementTransform(slidetitle, capframe))
+        # self.play(Write(capframe))
+
+        #* Slide
+        sN += 1
+        self.next_slide()
+        slideNUMBER.set_color(stdcolor).update()
+        self.add(slideNUMBER)
+        slidetitle = doslidetitle("Maps", section=ftitle).to_corner(UP+LEFT)
+        self.play(ReplacementTransform(capframe, slidetitle))
+
+        #* Slide
+        sN += 1
+        self.next_slide()
+        slideNUMBER.update()
+        temp = slidetitle
+        self.remove(slidetitle)
+        # self.add(temp)
+        slidetitle = doslidetitle("1-turn Map", section=ftitle).to_corner(UP+LEFT)
+        self.play(Unwrite(temp), Write(slidetitle, reverse=True))
+
+        sN += 1
+        self.next_slide()
+        slideNUMBER.update()
+        temp = slidetitle
+        self.remove(slidetitle)
+        # self.add(temp)
+        slidetitle = doslidetitle("Closed Orbit", section=ftitle).to_corner(UP+LEFT)
+        self.play(Unwrite(temp), Write(slidetitle, reverse=True))
+
+        #!########### END ############
+        self.next_slide()
+
+        end = doslidetitle("End").scale(FSDOCTITLE)
+        self.play(FadeOut(slideNUMBER), ReplacementTransform(slidetitle, end))

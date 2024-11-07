@@ -1,8 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/vitin/Prog/TCC-Pres/Manim/media/videos/pres/480p15/partial_movie_files/Orbiting/2731069402_3478833829_328270628.mp4'
-file 'file:C:/Users/vitin/Prog/TCC-Pres/Manim/media/videos/pres/480p15/partial_movie_files/Orbiting/2520254649_1310348086_3699366193.mp4'
-file 'file:C:/Users/vitin/Prog/TCC-Pres/Manim/media/videos/pres/480p15/partial_movie_files/Orbiting/2520254649_4207930152_1748128174.mp4'
-file 'file:C:/Users/vitin/Prog/TCC-Pres/Manim/media/videos/pres/480p15/partial_movie_files/Orbiting/2520254649_3644602691_1653017388.mp4'
-file 'file:C:/Users/vitin/Prog/TCC-Pres/Manim/media/videos/pres/480p15/partial_movie_files/Orbiting/2520254649_4225503354_2086992690.mp4'
-file 'file:C:/Users/vitin/Prog/TCC-Pres/Manim/media/videos/pres/480p15/partial_movie_files/Orbiting/2520254649_3592552475_3192434670.mp4'
-file 'file:C:/Users/vitin/Prog/TCC-Pres/Manim/media/videos/pres/480p15/partial_movie_files/Orbiting/2520254649_1493358869_4157280385.mp4'

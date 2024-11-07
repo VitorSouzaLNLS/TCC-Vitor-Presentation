@@ -1,0 +1,109 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\09b0e13630bff44b144381c9f10e802eebdd7bf11cf3e1ad53c8ea4a4ca346ff.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\09b0e13630bff44b144381c9f10e802eebdd7bf11cf3e1ad53c8ea4a4ca346ff_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\650ebc0c9ca2e40d5bb42684a2ca467d6e212ae0ac4824665ae813f31e7bc773.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\650ebc0c9ca2e40d5bb42684a2ca467d6e212ae0ac4824665ae813f31e7bc773_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\bf89ba900ba6d72063cdea5a226bcaca5489a47cf0698b66ab0521ad80605492.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\bf89ba900ba6d72063cdea5a226bcaca5489a47cf0698b66ab0521ad80605492_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\9d022a1733c60b2a7fecf4942930a7421d462f857604a68cf9fed2cd3bf741e5.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\9d022a1733c60b2a7fecf4942930a7421d462f857604a68cf9fed2cd3bf741e5_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\7e094ee1b0f24fcb1d391f0da0290a28e72f270af487341834855a6a1850316e.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\7e094ee1b0f24fcb1d391f0da0290a28e72f270af487341834855a6a1850316e_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\297559805956e06d1ff775dbe59306fb54aaa84f73813911c1baf2b6edd28dfc.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\297559805956e06d1ff775dbe59306fb54aaa84f73813911c1baf2b6edd28dfc_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\e22888d7b9c3ceea2d0e543eb8027d310a92a53d356848342c5b79207b315ee7.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\e22888d7b9c3ceea2d0e543eb8027d310a92a53d356848342c5b79207b315ee7_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\c83c66256742b3c38a1d5ad27307344e7b8ccdf78e95a135348abe06db745631.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\c83c66256742b3c38a1d5ad27307344e7b8ccdf78e95a135348abe06db745631_reversed.mp4"
+    },
+    {
+      "loop": true,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\08aee902c04920d54d7fe015e808f8a3d78d884b6e9597d622488f8a88ebb46d.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\08aee902c04920d54d7fe015e808f8a3d78d884b6e9597d622488f8a88ebb46d_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\SceneTCC2\\0365f791dfa07045547e0ad48fab3ddb4846a38ef0bac354af2f7693db397b8e.mp4",
+      "rev_file": "slides\\files\\SceneTCC2\\0365f791dfa07045547e0ad48fab3ddb4846a38ef0bac354af2f7693db397b8e_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1280,
+    720
+  ],
+  "background_color": "white"
+}

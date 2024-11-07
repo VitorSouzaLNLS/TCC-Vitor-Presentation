@@ -164,6 +164,7 @@ class SceneTCC2(ThreeDSlide):
         self.add_fixed_in_frame_mobjects(slidetitle)
         self.remove(slidetitle)
         self.play(Unwrite(temp), Write(slidetitle, reverse=True))
+        self.add_fixed_in_frame_mobjects(slidetitle)
 
         # title = doslidetitle("Particle Dynamics", "Theoretical Review").to_corner(UP+LEFT)
         # self.add_fixed_in_frame_mobjects(title)
@@ -371,10 +372,10 @@ class SceneTCC2(ThreeDSlide):
         self.next_slide()
         orbdraw.remove_updater(ideal_p_updater)
         particle.remove_updater(real_p_updater)
+        self.remove(path)
 
-        self.play(FadeOut(particle),FadeOut(orbit),
+        self.play(particle.animate, FadeOut(particle),FadeOut(orbit),
         FadeOut(orbdraw),FadeOut(orbvec), FadeOut(orbstr),
-        FadeOut(path),
         FadeOut(shat),FadeOut(shatstr),FadeOut(shattext),
         FadeOut(xhat),FadeOut(xhatstr),FadeOut(xhattext),
         FadeOut(yhat),FadeOut(yhatstr),FadeOut(yhattext),

@@ -1,0 +1,109 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\44b99c5ebec4f64c2f6352526f054a847ece6a83e7e47894e4794fdbd137df03.mp4",
+      "rev_file": "slides\\files\\S5\\44b99c5ebec4f64c2f6352526f054a847ece6a83e7e47894e4794fdbd137df03_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\6fd99ba7a45a9b2004bb4f1f1993e71738e14e391b4d5d06a21b1f3bbd508e82.mp4",
+      "rev_file": "slides\\files\\S5\\6fd99ba7a45a9b2004bb4f1f1993e71738e14e391b4d5d06a21b1f3bbd508e82_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\a5cab07e8a9b0963e00ced3c84f49981f89c02c0d875c1d7d136105985e488cf.mp4",
+      "rev_file": "slides\\files\\S5\\a5cab07e8a9b0963e00ced3c84f49981f89c02c0d875c1d7d136105985e488cf_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\5632e01da97c7ffe0355ef547b4e2ec437350160d18611a4de2cd21d54921634.mp4",
+      "rev_file": "slides\\files\\S5\\5632e01da97c7ffe0355ef547b4e2ec437350160d18611a4de2cd21d54921634_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\96021e621f5e7a6e086c94a5b096e2ff213e0c6af88bfbbb9c3760ed6b26fa6f.mp4",
+      "rev_file": "slides\\files\\S5\\96021e621f5e7a6e086c94a5b096e2ff213e0c6af88bfbbb9c3760ed6b26fa6f_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\b1ee3c90ebccc59936097192304ddeb1a049e050549385196fb9891c7ae133f0.mp4",
+      "rev_file": "slides\\files\\S5\\b1ee3c90ebccc59936097192304ddeb1a049e050549385196fb9891c7ae133f0_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\4621e1f48fd2430d01751afdb015148ee13f138e4a32685cc561e369453bc5d8.mp4",
+      "rev_file": "slides\\files\\S5\\4621e1f48fd2430d01751afdb015148ee13f138e4a32685cc561e369453bc5d8_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\f7647a89c8d6b2e7bb1c92e5017d5f7f71aedc7e53426b56446d8577002ddb0e.mp4",
+      "rev_file": "slides\\files\\S5\\f7647a89c8d6b2e7bb1c92e5017d5f7f71aedc7e53426b56446d8577002ddb0e_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\829300ce2f3100aa6bde61ca8f03d76ffaec7dd15d8b3171cce4f344545702d9.mp4",
+      "rev_file": "slides\\files\\S5\\829300ce2f3100aa6bde61ca8f03d76ffaec7dd15d8b3171cce4f344545702d9_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S5\\c54fcd0b82d9b4e7209d420137a59f3227aa5ef8bf488c47370e385bfa547dfe.mp4",
+      "rev_file": "slides\\files\\S5\\c54fcd0b82d9b4e7209d420137a59f3227aa5ef8bf488c47370e385bfa547dfe_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "white"
+}

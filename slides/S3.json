@@ -7,8 +7,8 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S3\\3c4d94730cec5f4f0ab79603a70fd8f9ecc54e069c582442da599607a32ce042.mp4",
-      "rev_file": "slides\\files\\S3\\3c4d94730cec5f4f0ab79603a70fd8f9ecc54e069c582442da599607a32ce042_reversed.mp4"
+      "file": "slides\\files\\S3\\cf589fcd2ef01e8e77cdde4eb4d230c05ac5c3402f1377bd5d0ad4b89b17d484.mp4",
+      "rev_file": "slides\\files\\S3\\cf589fcd2ef01e8e77cdde4eb4d230c05ac5c3402f1377bd5d0ad4b89b17d484_reversed.mp4"
     },
     {
       "loop": false,
@@ -17,8 +17,8 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S3\\50152be34858029e9ed920c8c7b3db7c989c4010f460f1ba673044147fb7b90f.mp4",
-      "rev_file": "slides\\files\\S3\\50152be34858029e9ed920c8c7b3db7c989c4010f460f1ba673044147fb7b90f_reversed.mp4"
+      "file": "slides\\files\\S3\\d29fbabba8efc9be0d9b24374a5800b9adae573fa611c9d9e87f44d057bceed7.mp4",
+      "rev_file": "slides\\files\\S3\\d29fbabba8efc9be0d9b24374a5800b9adae573fa611c9d9e87f44d057bceed7_reversed.mp4"
     },
     {
       "loop": false,
@@ -27,8 +27,8 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S3\\3248485026236716042f05d2145bc1bada928137c9af7ba73bda649f76f94193.mp4",
-      "rev_file": "slides\\files\\S3\\3248485026236716042f05d2145bc1bada928137c9af7ba73bda649f76f94193_reversed.mp4"
+      "file": "slides\\files\\S3\\174e1c891fb992a385f95f3c8626a0075cb7335f7962223239e521b6a3552660.mp4",
+      "rev_file": "slides\\files\\S3\\174e1c891fb992a385f95f3c8626a0075cb7335f7962223239e521b6a3552660_reversed.mp4"
     },
     {
       "loop": false,
@@ -37,8 +37,8 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S3\\36a85e9f18b9dcb5147257e7e4ac3034cf84a642eee36237edb8e2ecb146b4d8.mp4",
-      "rev_file": "slides\\files\\S3\\36a85e9f18b9dcb5147257e7e4ac3034cf84a642eee36237edb8e2ecb146b4d8_reversed.mp4"
+      "file": "slides\\files\\S3\\ed9229da8674c9b2385a620372a7019186674aadd2c511dc498a067f07d9e96a.mp4",
+      "rev_file": "slides\\files\\S3\\ed9229da8674c9b2385a620372a7019186674aadd2c511dc498a067f07d9e96a_reversed.mp4"
     },
     {
       "loop": false,
@@ -47,8 +47,8 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S3\\f67950a18403373be55d92512a3d26214fcf248e7d2322844f1a539334954c9a.mp4",
-      "rev_file": "slides\\files\\S3\\f67950a18403373be55d92512a3d26214fcf248e7d2322844f1a539334954c9a_reversed.mp4"
+      "file": "slides\\files\\S3\\dcaf130311ed116c4dd0eb21d78bf77db038f0543f118cff2a8f413660511674.mp4",
+      "rev_file": "slides\\files\\S3\\dcaf130311ed116c4dd0eb21d78bf77db038f0543f118cff2a8f413660511674_reversed.mp4"
     },
     {
       "loop": false,
@@ -57,8 +57,8 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S3\\e943aae194d233b105dd37d1c2909f1526fb36e5e03d50f4968faeeb1f6eed20.mp4",
-      "rev_file": "slides\\files\\S3\\e943aae194d233b105dd37d1c2909f1526fb36e5e03d50f4968faeeb1f6eed20_reversed.mp4"
+      "file": "slides\\files\\S3\\380b596dea479efb7394950d96d68f3ba4b346a65643c31748d7be5804c81f34.mp4",
+      "rev_file": "slides\\files\\S3\\380b596dea479efb7394950d96d68f3ba4b346a65643c31748d7be5804c81f34_reversed.mp4"
     },
     {
       "loop": false,
@@ -67,18 +67,8 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S3\\1e287520459b61fc734ab31d6cf3e50a08af30f43b37b626562bdb4a02cbcebe.mp4",
-      "rev_file": "slides\\files\\S3\\1e287520459b61fc734ab31d6cf3e50a08af30f43b37b626562bdb4a02cbcebe_reversed.mp4"
-    },
-    {
-      "loop": true,
-      "auto_next": false,
-      "playback_rate": 1.0,
-      "reversed_playback_rate": 1.0,
-      "notes": "",
-      "dedent_notes": true,
-      "file": "slides\\files\\S3\\639ea496ce10793a1e53c02726908ae7207f67a94943fe7cbaaa75dcd114c719.mp4",
-      "rev_file": "slides\\files\\S3\\639ea496ce10793a1e53c02726908ae7207f67a94943fe7cbaaa75dcd114c719_reversed.mp4"
+      "file": "slides\\files\\S3\\fe870129368564a633ee398c289f174557c7beaf6cb9ab3c98741c58b52eed17.mp4",
+      "rev_file": "slides\\files\\S3\\fe870129368564a633ee398c289f174557c7beaf6cb9ab3c98741c58b52eed17_reversed.mp4"
     },
     {
       "loop": false,
@@ -87,8 +77,18 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S3\\12eaec5b01b162c966c528f581075be7b01158cc619eb3ab6aa23dfd7f18dce1.mp4",
-      "rev_file": "slides\\files\\S3\\12eaec5b01b162c966c528f581075be7b01158cc619eb3ab6aa23dfd7f18dce1_reversed.mp4"
+      "file": "slides\\files\\S3\\94cf119f48e74218ff4ee6939f2e4a2a447d6b3e806c08d6ae53f6a6ac3d3420.mp4",
+      "rev_file": "slides\\files\\S3\\94cf119f48e74218ff4ee6939f2e4a2a447d6b3e806c08d6ae53f6a6ac3d3420_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides\\files\\S3\\8211b00935987f1584b8d2cf3050bc67f6895d19a68ac483d656ba18b32e2087.mp4",
+      "rev_file": "slides\\files\\S3\\8211b00935987f1584b8d2cf3050bc67f6895d19a68ac483d656ba18b32e2087_reversed.mp4"
     }
   ],
   "resolution": [

@@ -7,13 +7,13 @@
       "reversed_playback_rate": 1.0,
       "notes": "",
       "dedent_notes": true,
-      "file": "slides\\files\\S2\\556de9b26e8da0b73287d630f3f50fae55cd031d1def4c5a3bf98f95bcc090e6.mp4",
-      "rev_file": "slides\\files\\S2\\556de9b26e8da0b73287d630f3f50fae55cd031d1def4c5a3bf98f95bcc090e6_reversed.mp4"
+      "file": "slides\\files\\S2\\90be3348aa675479c07e97c1959eb83a99c393a88cbc4e0c1d034e08393ac21c.mp4",
+      "rev_file": "slides\\files\\S2\\90be3348aa675479c07e97c1959eb83a99c393a88cbc4e0c1d034e08393ac21c_reversed.mp4"
     }
   ],
   "resolution": [
-    1280,
-    720
+    1920,
+    1080
   ],
   "background_color": "white"
 }

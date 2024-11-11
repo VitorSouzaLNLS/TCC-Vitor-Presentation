@@ -42,7 +42,7 @@ def dosec2sec(scene, curr_sec_mob, next_sec_title, proj=None):
         scene.add_fixed_in_frame_mobjects(nextsec)
         scene.remove(nextsec)
     scene.play(Unwrite(curr_sec_mob, reverse=True), run_time=0.6)
-    scene.play(Write(nextsec))
+    scene.play(Write(nextsec), run_time=0.6)
     # return nextsec
 
 def docap2sec(scene, curr_cap_mob, next_sec_title):
@@ -127,7 +127,7 @@ class S3(ThreeDSlide):
         #! parametros
 
         R = 3.0
-        t = 0.05
+        t = 0.00
         runtime = 7
         fps = 30
         dtk = 1/fps
@@ -305,9 +305,6 @@ class S3(ThreeDSlide):
         self.play(Create(yhat))
         self.play(Write(yhatstr), Write(yhattext))
 
-        print(yhat.get_start(), yhat.get_end())
-
-        return
         #! simulação
 
         #* addiciona partícula
@@ -377,79 +374,82 @@ class S4(ThreeDSlide):
         orbit = Arc(radius=R, start_angle=-PI/4, angle=PI/2, color=stdcolor, stroke_width=0.8)
         ds, dx, dy = 0, 0.25, 0.2
         p0 = np.array([R+dx, 0, dy])
-        particle = Dot3D(radius=0.05, color=RED).move_to(p0)
+        pradius = 0.05
+        particle = Dot3D(radius=pradius, color=RED).move_to(p0)
         start = np.array([R, 0, 0])
-        d1, d2, d3 = np.array([1, 0, 0]), np.array([0, -1, 0]), np.array([0, 0, 1])
-        vdx = np.array([-dx,0,0])
-        vds = np.array([0,+dx,0])
-        vdy = np.array([0,0,-dx])
-        ascale=1
-        vx = Arrow(start=start+vdx, end=start+d1*ascale, stroke_width=0.8, max_tip_length_to_length_ratio=0.1, color=stdcolor)
-        vs = Arrow(start=start+vds, end=start+d2*ascale, stroke_width=0.8, max_tip_length_to_length_ratio=0.1, color=stdcolor)
-        vy = Arrow(start=start+vdy, end=start+d3*ascale, stroke_width=0.8, max_tip_length_to_length_ratio=0.1, color=stdcolor).rotate(PI/2, OUT)
+        vxdir = np.array([1, 0, 0])
+        vx = Vector(direction=vxdir, buff = 0.2, color=stdcolor, stroke_width=0.8).put_start_and_end_on(start,start+vxdir)
+        vsdir = np.array([0, -1, 0])
+        vs = Vector(direction=vsdir, buff = 0.2, color=stdcolor, stroke_width=0.8).put_start_and_end_on(start,start+vsdir)
+        vydir = np.array([0, 0, 1])
+        vy = Vector(direction=vydir, buff = 0.2, color=stdcolor, stroke_width=0.8).put_start_and_end_on(start,start+vydir).rotate(PI/2, OUT)
+
         vxstr, vsstr, vystr = [MathTex("\\hat{"+a+"}", color=stdcolor).scale(0.4).rotate(PI/2,RIGHT) for a in ["x", "s", "y"]]
-        vxstr.move_to(vx.get_end()+0.3*vx.get_unit_vector())
-        vsstr.move_to(vs.get_end()+0.3*vs.get_unit_vector())
-        vystr.move_to(vy.get_end()+0.3*vy.get_unit_vector())
-        grou = VGroup(orbit, particle, vs, vx, vy, vxstr, vsstr, vystr)
-        # self.play(Create(orbit, reverse=True))
-        # self.play(Create(vx), Create(vy), Create(vs), Create(vxstr), Create(vystr), Create(vsstr))
-        # self.play(FadeIn(particle))
+        vxstr.move_to(vx.get_end()+0.15*vx.get_unit_vector())
+        vsstr.move_to(vs.get_end()+0.15*vs.get_unit_vector())
+        vystr.move_to(vy.get_end()+0.15*vy.get_unit_vector())
+
         self.add(orbit)
         self.add(particle)
         self.add(vx, vy, vs, vxstr, vystr, vsstr)
-        self.play(FadeOut(orbitfull))
-
-        # self.next_slide()
-        # self.move_camera(theta=-110*DEGREES, phi=70*DEGREES)
-        # self.play(grou.animate.scale(4).shift(4.5*LEFT))
-        # , vxstr.animate.scale(0.6)
-        # , vsstr.animate.scale(0.6)
-        # , vystr.animate.scale(0.6))
+        self.move_camera(theta=-110*DEGREES, phi=70*DEGREES, zoom=3, frame_center=p0, added_anims=[FadeOut(orbitfull), vsstr.animate.scale(0.9), vxstr.animate.scale(0.9), vystr.animate.scale(0.9)])
 
         self.next_slide()
-        self.move_camera(theta=-110*DEGREES, phi=70*DEGREES, zoom=3, frame_center=p0)
-        self.play(vsstr.animate.scale(0.9), vxstr.animate.scale(0.9), vystr.animate.scale(0.9))
+        xstate = MathTex(r"\mathbf{x}", color=stdcolor).scale(0.3).rotate(PI/2,RIGHT).next_to(particle)
+        self.play(Write(xstate))
 
         self.next_slide()
         p0 = particle.get_center()
         oS = vs.get_start()
-        proy = DashedLine(start=p0, end=[p0[0], p0[1], oS[2]], color=GRAY, stroke_width=3)
-        prox = DashedLine(start=p0, end=[oS[0], oS[1], p0[2]], color=GRAY, stroke_width=3)
+        proy = DashedLine(start=p0, end=[p0[0], p0[1], oS[2]], color=GRAY, stroke_width=3, dash_length=0.05, dashed_ratio=0.7)
+        prox = DashedLine(start=p0, end=[oS[0], oS[1], p0[2]], color=GRAY, stroke_width=3, dash_length=0.05, dashed_ratio=0.7)
         valpy = Line(start=oS, end=[oS[0], oS[1], p0[2]], stroke_width=3, color=GREEN_D)
         valpx = Line(start=oS, end=[p0[0], p0[1], oS[2]], stroke_width=3, color=BLUE_D)
-        yval = MathTex("y", color=GREEN_D).scale(0.3).rotate(PI/2, RIGHT).next_to(valpy.get_center(), 0.3*LEFT)#, LEFT)
-        xval = MathTex("x", color=BLUE_D).scale(0.3).rotate(PI/2, RIGHT).next_to(valpx.get_center(), 0.3*IN)
-        self.play(Create(proy), Create(prox))
-        self.play(Create(valpy), Create(valpx), Write(yval), Write(xval))
-        self.remove(particle)
-        self.add(particle)
+        yval = MathTex("y", color=GREEN_D).scale(0.3).rotate(PI/2, RIGHT).next_to(valpy.get_center(), 0.2*LEFT)#, LEFT)
+        xval = MathTex("x", color=BLUE_D).scale(0.3).rotate(PI/2, RIGHT).next_to(valpx.get_center(), 0.2*IN)
+
+        particle.set_z_index(1)
+
+        self.play(Create(prox))
+        self.play(Create(proy))
+
+        self.next_slide()
+
+        self.play(Create(valpx), Write(xval))
+        xstatestr = MathTex(r"\mathbf{x} = \left(x\right)", color=stdcolor).scale(0.3).rotate(PI/2,RIGHT).next_to(particle)
+        self.play(FadeTransform(xstate, xstatestr))
+
+        self.play(Create(valpy), Write(yval))
+
+        temp = xstatestr
+        xstatestr = MathTex(r"\mathbf{x} = \left(x, y\right)", color=stdcolor).scale(0.3).rotate(PI/2,RIGHT).next_to(particle)
+        self.play(FadeTransform(temp, xstatestr))
 
         self.next_slide()
         p = np.array([0.07, -0.4, 0.07])*4
         p0 = particle.get_center()
         pvec = Arrow(start=p0, end=p0+p, buff=0, color=RED, stroke_width=3, max_tip_length_to_length_ratio=0.03).rotate(PI/2, p)
         p1 = pvec.get_end()
-        pstr = MathTex("p", color=RED).scale(0.3).rotate(PI/2,RIGHT).next_to(p1, OUT)
+        pstr = MathTex("p", color=RED).scale(0.3).rotate(PI/2,RIGHT).next_to(p1)# + 0.01*pvec.get_unit_vector())
         self.play(Create(pvec), Write(pstr))
-        self.remove(particle)
-        self.add(particle)
 
-        self.next_slide()
-        sparallel = DashedLine(start=p0, end=[p0[0], p1[1], p0[2]], color=GRAY, stroke_width=2)
+        # particle.set_z_index(1)
+        # self.next_slide()
+        sparallel = DashedLine(start=p0, end=[p0[0], p1[1], p0[2]], color=GRAY, stroke_width=2, dash_length=0.05, dashed_ratio=0.7)
         proj = np.array([p1[0], p1[1], p0[2]])
-        pparallel = DashedLine(start=p0, end=proj, color=GRAY, stroke_width=2)
+        pparallel = DashedLine(start=p0, end=proj, color=GRAY, stroke_width=2, dash_length=0.05, dashed_ratio=0.7)
         self.play(Create(sparallel), Create(pparallel))
-        self.remove(particle)
-        self.add(particle)
 
         self.next_slide()
         xprime = Arc(radius=0.9, start_angle=-PI/2, angle=-p[0]/p[1], arc_center=p0, color=BLUE_D, stroke_width=2)
         xprimestr = MathTex("x^\\prime", color=BLUE_D).scale(0.2).rotate(PI/2, RIGHT).next_to(xprime.get_center(), 0.9*DOWN)
         self.play(Create(xprime), Write(xprimestr))
 
+        temp = xstatestr
+        xstatestr = MathTex(r"\mathbf{x} = \left(x, x', y\right)", color=stdcolor).scale(0.3).rotate(PI/2,RIGHT).next_to(particle)
+        self.play(FadeTransform(temp, xstatestr))
 
-        self.next_slide()
+        # self.next_slide()
         pax = pvec.get_unit_vector()
         pax[-1] = 0.0
         pax /= norm(pax)
@@ -459,6 +459,29 @@ class S4(ThreeDSlide):
         yprime = Arc(radius=ryp, start_angle=-PI/2, angle=-p[2]/p[1], arc_center=p0, color=GREEN_D, stroke_width=2).rotate(-PI/2, pax, about_point=pk)
         yprimestr = MathTex("y^\\prime", color=GREEN_D).scale(0.2).rotate(PI/2, RIGHT).next_to(yprime.get_center(), 0.12*RIGHT+0.25*DOWN)
         self.play(Create(yprime), Write(yprimestr))
+
+        temp = xstatestr
+        xstatestr = MathTex(r"\mathbf{x} = \left(x, x', y, y'\right)", color=stdcolor).scale(0.3).rotate(PI/2,RIGHT).next_to(particle)
+        # self.add_fixed_in_frame_mobjects(xstatestr)
+        # self.remove(xstatestr)
+        self.play(TransformMatchingTex(temp, xstatestr))
+
+        self.next_slide()
+        self.play(
+            FadeOut(
+                particle, orbit,
+                sparallel, pparallel,
+                xprime, xprimestr,
+                yprime, yprimestr,
+                xval, yval,
+                valpx, valpy,
+                proy, prox, xstatestr,
+                pvec, pstr,
+                vx, vy, vs,
+                vxstr, vystr, vsstr
+                ),
+            # xstatestr.animate.move_to(ORIGIN).scale(2)
+        )
 
         # self.next_slide(loop=True)
         # self.begin_ambient_camera_rotation(rate=0.3, about='theta')
